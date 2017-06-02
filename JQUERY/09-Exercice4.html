@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form id="MonFormulaire" method="post" action="connexion.php">
+        <input type="text" name="email" placeholder="Email"><br><br>
+        <input type="text" name="mdp" placeholder="Mot de passe"><br><br>
+        <input type="submit" id="submit" value="Connexion"><br><br>
+    </form>
+
+    <!-- CONSIGNE : Avec l'aide de JQuery, vous devrez : 
+
+        1. à l'aide d'une API de Géolocalisation, vous affichez dans un paragraphe du formulaire 
+        l'adresse IP ainsi que la ville et/ou code postal de l'utilisateur connecté.
+
+        Utilisation de JSONP : geoip.nekudo.com || ip-api.com
+
+
+
+    -->
+
+        <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+
+   
+       <!-- function foo(data) {
+            document.write("City: ", data.city + "<br>");
+            document.write("Country: ", data.country.name + "<br>");
+            document.write("Latitude: ", data.location.latitude + "<br>");
+            document.write("Longitude: ", data.location.longitude + "<br>");
+        }; 
+        <script src="http://geoip.nekudo.com/api?callback=foo"></script>
+       
+
+         <table id="GeoResults"></table> 
+        <script>
+        $.getJSON("http://ip-api.com/json/?callback=?", function(data) {
+            var table_body = "";
+            $.each(data, function(k, v) {
+                table_body += "<tr><td>" + k + "</td><td><b>" + v + "</b></td></tr>";
+            });
+            $("#GeoResults").html(table_body);
+        });
+        </script>-->
+        
+        <script>
+        // on ouvre le DOM
+        $(function(){
+            //1 Une requête AJAX simple
+            $.ajax('http://geoip.nekudo.com/api/').done(function(resultat){
+                console.log(resultat);
+            });
+            //2 avec getJSON et JSONP (Callback)
+            $.getJSON('http://ip-api.com/json/?callback=', function(resultat){
+                console.log(resultat);
+            //Affiche sur ma page
+            $('<p>').text("Votre IP est surveillée : " + resultat.query + " " + resultat.isp).css({'background' : 'yellow','color' : 'red'}).appendTo($('form'));
+            });
+        });
+        </script>
+
+
+</body>
+</html>

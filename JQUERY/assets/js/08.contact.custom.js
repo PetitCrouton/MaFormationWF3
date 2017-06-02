@@ -32,7 +32,7 @@ var tel = $('#tel');
 function ajouterContact() {
     
         // création d'un objet pour recueillir les données saisies par chaque utilisateur
-        var person = {
+       /* var person = {
             'nom'       : nom.val(), 
             'prenom'    : prenom.val(), 
             'email'     : email.val(), 
@@ -44,9 +44,9 @@ function ajouterContact() {
 
         console.log(person);
         contacts.push(person);
-        console.log(contacts);
+        console.log(contacts);*/
 
-        $('tbody').append('<tr><td>' + nom.val() + '<tr><td>' + prenom.val() + '<tr><td>' + email.val() + tel);
+        $('tbody').append('<tr><td>' + nom.val() + '</td><td>' + prenom.val() + '</td><td>' + email.val() + '</td><td>' + tel.val() + '</td></tr>');
 }
   
 
@@ -56,8 +56,16 @@ function ajouterContact() {
 function ReinitialisationDuFormulaire(){}
 
 //affichage d'une notification
-function afficheUneNotification(){}
-
+function afficheUneNotification(){
+    $(this).prepend('<div class="alert alert-success">Votre demande a bien été envoyée !</div>');
+}
+/*
+ if($(this).find('.has-error').length == 0) {
+                 $(this).replaceWith('<div class="alert alert-success">Votre demande a bien été envoyée !</div>');
+             }else{
+                 $(this).prepend('<div class="alert alert-danger">Nous n\'avons pas été en mesure de valider votre demande. Vérifiez la saisie de vos informations</div>')
+             }
+*/
 //verification de la presence d'un contact dans Contacts
 function estCeQunContactEstPresent(){}
 
@@ -115,8 +123,10 @@ $('#contact').on('submit', function(e){
     
     if($(this).find('.has-error').length == 0){
             ajouterContact();
+            $('.aucuncontact').replaceWith('');
             ReinitialisationDuFormulaire();
-            afficheUneNotification();
+            $('.alert alert-success alert-contact').prepend();
+            $(this).prepend('<div class="alert alert-success">Votre contact a bien été ajouté !</div>');
             }else{
                  $(this).prepend('<div class="alert alert-danger">Nous n\'avons pas été en mesure de valider votre demande. Vérifiez la saisie de vos informations</div>')
             }
