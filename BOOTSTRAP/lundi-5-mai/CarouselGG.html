@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Encodage des Caractères de la Page -->
+    <meta charset="UTF-8">
+
+    <!-- Affichage du site sans zoom, initialisé à 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Pour IE, s'assurer qu'il utilise la dernière version de son moteur de rendu 
+    https://www.alsacreations.com/astuce/lire/1437-comment-interdire-le-mode-de-compatibilite-sur-ie.html -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--JQuery ui CSS-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <!-- Styles CSS 
+    <link rel="stylesheet" href="#">-->
+
+    <!-- html5Shiv.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+
+    <!-- Respond.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+
+    <!-- Le Titre de la Page -->
+    <title>G-Carousel</title>
+</head>
+<body>
+    <!-- Contenu HTML 
+    <p>Date :<input type="text" name="date" id="datepicker"></p>-->
+<div class="container">
+  <h2>Carousel Example</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="assets/img/la.jpg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+            <h3>Los Angeles</h3>
+            <p>LA is always so much fun!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="assets/img/chicago.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+            <h3>Chicago</h3>
+            <p>Thank you, Chicago!</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="assets/img/ny.jpg" alt="New york" style="width:100%;">
+        <div class="carousel-caption">
+            <h3>New York</h3>
+            <p>We love the Big Apple!</p>
+      </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> <!--Fermeture div#myCarousel-->
+</div> <!--Fermeture div.container-->
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
+    <!--JQuery ui-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
+   <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Mon Fichier JS 
+    <script src="#"></script>-->
+
+    <!--Intégration de notre fichier JS ui-->
+    <script src="assets/js/jquery-ui.js"></script>  
+
+    <script>
+    
+    $(function(){ // on ouvre le DOM
+        
+        //$.datepicker.setDefaults($.datepicker.regional['fr']);
+
+        //$('#datepicker').datepicker({
+            dateFormat : 'dd/mm/yy',
+        //});
+       
+    });//fin de l'ouverture du DOM
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,95 @@
+body{
+    background: black;
+}
+ /*Navbar APPLE*/
+.navbar-apple{
+    background: #1E1E1E;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+.navbar-apple ul{
+    margin: 0 auto;
+}
+
+.navbar-apple ul li{
+    margin: 0px 10px;
+}
+
+.navbar-apple ul li a{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+/*Section mobile*/
+#mobile{
+    background: #141414;
+}
+
+/*section texte iphone 7*/
+#iPhone7{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#iPhone7 h2{
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400
+}
+
+#iPhone7 h3{
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400
+}
+
+#iPhone7 a{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400
+}
+
+#iPhone7 p{
+    color : grey;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400
+}
+
+/*section passez à l'iphone 7*/
+#passez{
+    background: white;
+    text-align: center;
+    padding-top: 40px;
+}
+#passez article{
+  
+}
+
+#passez article h3{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: #303236;
+    margin: 40px 0;
+}
+
+#passez article h3 p{
+
+}
+
+/*Forumlaire*/
+textarea{
+    width: 100%;
+}
